@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="esti.css">
+<body>
+	<div class="d1">
+		<h1>Sumas y restas</h1>
+	</div>
+	<div class="d2">
+		<div class="b1" onclick="info();">
+			<br>
+			<h3>Información</h3>
+		</div>
+		<div class="b2" onclick="op();">
+			<br>
+			<h3>Resolver</h3>
+		</div>
+		<div class="b3" onclick="brr();">
+			<br>
+			<h3>Limpiar</h3>
+		</div>
+	</div>
+	<div class="d3">
+		<div class="r1" id="r">
+				<input type="text" class="i1" id="n1">
+				<div class="s1">+</div>
+				<input type="text" class="i2" id="n2">
+				<div class="s2">-</div>
+				<input type="text" class="i3" id="n3">
+				<button class="re" onclick="re();"><b>Resolver</b></button>
+				<div class="caja" id="caja">
+					<script type="text/javascript">
+						var re=function()
+						{
+							var n1=document.getElementById("n1").value;
+							var n2=document.getElementById("n2").value;
+							var n3=document.getElementById("n3").value;
+
+							var op=parseInt(n1)+parseInt(n2)-parseInt(n3);
+
+							document.getElementById("caja").innerHTML=op;
+						}
+					</script>
+				</div>
+		</div>
+		<div class="info2" id="info">
+			<div class="suma">
+				<h2>La suma</h2>
+				<p>La suma o adición es la operación matemática que resulta al reunir en una sola varias cantidades. Las números que se suman se llaman sumandos y el resultado suma o total. Para su notación se emplea entre los sumandos el signo + que se lee "más".</p>
+			</div>
+			<div class="resta">
+				<h2>La resta</h2>
+				<p>La sustracción o resta es la operación contraria a la suma. Tiene por objeto, dada la suma de dos números y uno de ellos, hallar el otro. Para su notación se coloca entre el minuendo y el sustraendo el signo − que se lee "menos".</p>
+			</div>
+		</div>
+		<div class="ini1" id="ini">
+			<br><br><br><br><br><br>
+			<h1>Aquí aparecerá la opción que elija con los botones de la izquierda</h1>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		var b1=document.getElementById("info");
+		var b2=document.getElementById("r");
+		var b3=document.getElementById("ini");
+
+		var op=function()
+		{
+			b1.className="info1"
+			b2.className="r2";
+			b3.className="ini2";
+		}
+
+		var info=function()
+		{
+			b1.className="info2"
+			b2.className="r1";
+			b3.className="ini2";
+		}
+
+		var brr=function()
+		{
+			b1.className="info1"
+			b2.className="r1";
+			b3.className="ini1";
+		}
+	</script>
+</body>
+</html>
